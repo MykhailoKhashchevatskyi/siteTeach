@@ -111,6 +111,10 @@ html {
     padding: 16px 0;
   }
 }
+.header__menu {
+  max-width: 100%;
+}
+
 .list {
   display: flex;
   justify-content: space-between;
@@ -157,7 +161,7 @@ html {
 
 @media (max-width: 1260px) {
   .burger-menu {
-    display: flex;
+    display: inline-block;
   }
   .list {
     display: flex;

@@ -1,0 +1,127 @@
+// hero-section 
+
+
+.hero {
+   height: 90vh;
+  padding: 140px 0 70px 0;
+   @media (max-width: 1171px) {
+      padding: 140px 0 10px 0;
+   }
+   @media (max-width: 1009px) {
+      padding: 40px 0 40px 0;
+   }
+		&__wrapper {
+      position: relative;
+      display: flex;
+         @media (max-width: 1009px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+         }
+		}
+    &__theme{
+      margin: -70px 0 0 0;
+      max-width: 594px;
+      @media (max-width: 1009px){
+         margin: 0;
+      }
+    }
+		&__title {
+      max-width: 594px;
+		}
+
+		&__name {
+      font-size: 72px;
+      font-weight: bold;
+      line-height: 82.5px;
+      color: #FF8A56;
+      margin: 0 0 5px 0;
+         @media (max-width: 1171px) {
+            font-size: 50px;
+            line-height: 60px;
+         }
+         @media (max-width: 416px){
+            font-size: 37px;
+         }
+		}
+
+		&__info {
+         position: relative;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 36px;
+      letter-spacing: 2px;
+      margin: 0 0 18px 0;
+         @media (max-width: 1171px) {
+            font-size: 20px;
+            line-height: 30px;
+         }
+         @media (max-width: 416px){
+            font-size: 18px;
+            line-height: 20px;
+         }
+		}
+
+		&__teach {
+      color: #666;
+      font-weight: 300;
+      font-size: 22px;
+      margin: 0 0 55px 0;
+         @media (max-width: 1171px) {
+            font-size: 12px;
+            margin: 0 0 30px 0;
+         }
+         
+		}
+
+		&__picture-box {
+      width: 660px;
+         @media (max-width: 1171px) {
+            max-width: 660px;
+         }
+         @media (max-width: 1009px) {
+            max-width: 340px;
+         }
+		}
+
+		&__picture {
+         max-width: 100%;
+		}
+
+    &__btn {
+      width: 50px;
+      color: #fff;
+      background-color: black;
+      padding: 15px 25px;
+         @media (max-width: 416px){
+            font-size: 11px;
+         }
+    }
+}
+.container {
+}
+.btn {
+}
+
+blockquote {
+  font-size: 20px;
+  font-weight: 200;
+  font-style: italic;
+  position: absolute;
+  bottom: 90px;
+  left: 70px;
+  max-width: 570px;
+         @media (max-width: 1171px) {
+            max-width: 350px;
+         }
+         @media (max-width: 1009px) {
+            position: static;
+            font-size: 16px;
+
+         }
+         @media (max-width: 416px){
+            font-size: 37px;
+            font-size: 14px;
+            max-width: 300px;
+         }
+}

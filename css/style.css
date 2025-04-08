@@ -162,6 +162,9 @@ html {
 @media (max-width: 1260px) {
   .burger-menu {
     display: inline-block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
   }
   .list {
     display: flex;

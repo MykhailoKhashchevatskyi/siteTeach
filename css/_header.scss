@@ -1,0 +1,39 @@
+.header {
+
+		&__wrapper {
+        padding: 39px 0;
+      @media (max-width: 1260px) {
+        padding: 16px 0;
+      }
+		}
+
+		&__menu {
+      max-width: 100%;
+		}
+}
+.container {
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+		&__item {
+      font-size: 16.64px;
+      text-transform: uppercase;
+      line-height: 29.1px;
+      cursor: pointer;
+      &:hover{
+        color: rgba(0, 0, 0, 0.473);
+      }
+      &:active{
+        color: rgba(0, 0, 0, 0.733);
+      }
+      @media (max-width: 360px) {
+        font-size: 13px;
+      }
+		}
+      @media (max-width: 1260px) {
+      justify-content: center;
+      gap: 15px;
+      font-weight: 600;
+      }
+}

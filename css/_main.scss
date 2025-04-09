@@ -2,8 +2,9 @@
 
 
 .hero {
-   height: 90vh;
-  padding: 140px 0 70px 0;
+  position: relative;
+  height: 700px;
+  padding: 140px 0 0px 0;
    @media (max-width: 1171px) {
       padding: 140px 0 10px 0;
    }
@@ -46,7 +47,6 @@
 		}
 
 		&__info {
-         position: relative;
       font-size: 32px;
       font-weight: 300;
       line-height: 36px;
@@ -108,7 +108,7 @@ blockquote {
   font-weight: 200;
   font-style: italic;
   position: absolute;
-  bottom: 90px;
+  bottom: 0px;
   left: 70px;
   max-width: 570px;
          @media (max-width: 1171px) {
@@ -124,4 +124,64 @@ blockquote {
             font-size: 14px;
             max-width: 300px;
          }
+}
+
+
+// info-section
+
+
+.info {
+   padding: 30px 0;
+   margin: 0 0 30px 0;
+   border-bottom: 1px solid black;
+   border-top: 1px solid black;
+		&__wrapper {
+         display: flex;
+         justify-content: space-around;
+         @media (max-width: 1009px){
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+         }
+		}
+
+		&__block {
+         flex: 0 0 500px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+         @media (max-width: 1009px){
+            flex: 1 1;
+         }
+		}
+
+		&__pin {
+         max-width: 50px;
+         @media (max-width: 1009px){
+            max-width: 30px;
+         }
+		}
+
+		&__title {
+         color: #FF5E69;
+         font-size: 24px;
+         text-transform: uppercase;
+         line-height: 26px;
+         @media (max-width: 1009px){
+            font-size: 18px;
+            line-height: 20px;
+         }
+		}
+
+		&__text {
+         font-size: 16px;
+         text-transform: uppercase;
+         text-align: center;
+         @media (max-width: 1009px){
+            font-size: 14px;
+         }
+		}
+}
+.container {
 }

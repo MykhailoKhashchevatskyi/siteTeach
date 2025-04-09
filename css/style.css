@@ -103,8 +103,11 @@ html {
   scroll-behavior: smooth;
 }
 
-.header {
-  background-color: #fff;
+@media (min-width: 1260px) {
+  .header {
+    background-color: #000;
+    color: white;
+  }
 }
 .header__wrapper {
   padding: 39px 0;
@@ -129,10 +132,10 @@ html {
   cursor: pointer;
 }
 .list__item:hover {
-  color: rgba(0, 0, 0, 0.473);
+  color: #FF5E69;
 }
 .list__item:active {
-  color: rgba(0, 0, 0, 0.733);
+  color: #FF5E69;
 }
 @media (max-width: 360px) {
   .list__item {
@@ -148,8 +151,9 @@ html {
 }
 
 .hero {
-  height: 90vh;
-  padding: 140px 0 70px 0;
+  position: relative;
+  height: 700px;
+  padding: 140px 0 0px 0;
 }
 @media (max-width: 1171px) {
   .hero {
@@ -203,7 +207,6 @@ html {
   }
 }
 .hero__info {
-  position: relative;
   font-size: 32px;
   font-weight: 300;
   line-height: 36px;
@@ -267,7 +270,7 @@ blockquote {
   font-weight: 200;
   font-style: italic;
   position: absolute;
-  bottom: 90px;
+  bottom: 0px;
   left: 70px;
   max-width: 570px;
 }
@@ -287,6 +290,66 @@ blockquote {
     font-size: 37px;
     font-size: 14px;
     max-width: 300px;
+  }
+}
+
+.info {
+  padding: 30px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+.info__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 1009px) {
+  .info__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.info__block {
+  flex: 0 0 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1009px) {
+  .info__block {
+    flex: 1 1;
+  }
+}
+.info__pin {
+  max-width: 50px;
+}
+@media (max-width: 1009px) {
+  .info__pin {
+    max-width: 30px;
+  }
+}
+.info__title {
+  color: #FF5E69;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 26px;
+}
+@media (max-width: 1009px) {
+  .info__title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+.info__text {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 1009px) {
+  .info__text {
+    font-size: 14px;
   }
 }
 

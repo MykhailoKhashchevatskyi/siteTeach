@@ -185,3 +185,48 @@ blockquote {
 }
 .container {
 }
+
+
+// courses block 
+
+.courses {
+   position: relative;
+   padding: 20px 0;
+		&__title {
+         font-size: 30px;
+         font-weight: 300;
+         text-align: center;
+         @media (max-width: 1009px) {
+            font-size: 24px;
+         }
+		}
+		&__swiper {
+		}
+}
+.container {
+}
+.swiper-block {
+
+		&__box {
+         display: flex;
+         gap: 15px;
+         padding: 40px 0;
+		}
+
+		&__image {
+         max-width: 500px;
+         object-fit: contain;
+         &:hover{
+            transform: scale(1.1);
+            transition: 1s ease;
+         }
+         @media (max-width: 1009px) {
+            max-width: 330px;
+         }
+		}
+}
+
+.courses-container{
+   overflow-x: scroll;
+   max-width: 100%;
+}

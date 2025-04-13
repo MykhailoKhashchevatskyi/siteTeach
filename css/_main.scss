@@ -245,6 +245,17 @@ blockquote {
 
 .gallery {
    padding: 50px 0;
+      &__flex{
+         @media (min-width: 1009px){
+            display: flex;
+            gap: 15px;
+         }
+         @media (max-width: 1009px){
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+         }
+      }
 		&__wrapper {
          display: flex;
          flex-direction: column;
@@ -274,7 +285,17 @@ blockquote {
          overflow: hidden;
          object-fit: contain;
          box-shadow: 2px 2px 10px 1px black;
+         &:hover{
+            transform: scale(1.02);
+            transition: 1s ease;
+         }
 		}
+}
+.gallery-margin-top {
+   margin-top: 20px;
+}
+.gallery-margin-bottom {
+   margin-bottom: 30px;
 }
 .container {
 }

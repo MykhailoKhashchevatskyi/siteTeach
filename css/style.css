@@ -238,11 +238,11 @@ html {
   }
 }
 .hero__picture-box {
-  width: 660px;
+  width: 560px;
 }
 @media (max-width: 1171px) {
   .hero__picture-box {
-    max-width: 660px;
+    max-width: 460px;
   }
 }
 @media (max-width: 1009px) {
@@ -359,12 +359,14 @@ blockquote {
 }
 .courses__title {
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: 2.5px;
   text-align: center;
 }
 @media (max-width: 1009px) {
   .courses__title {
-    font-size: 24px;
+    font-size: 22px;
+    padding: 0 20px;
   }
 }
 .swiper-block__box {
@@ -373,6 +375,7 @@ blockquote {
   padding: 40px 0;
 }
 .swiper-block__image {
+  height: 350px;
   max-width: 500px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -383,6 +386,7 @@ blockquote {
 }
 @media (max-width: 1009px) {
   .swiper-block__image {
+    height: 230px;
     max-width: 330px;
   }
 }

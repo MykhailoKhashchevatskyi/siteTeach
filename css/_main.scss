@@ -75,9 +75,9 @@
 		}
 
 		&__picture-box {
-      width: 660px;
+      width: 560px;
          @media (max-width: 1171px) {
-            max-width: 660px;
+            max-width: 460px;
          }
          @media (max-width: 1009px) {
             max-width: 340px;
@@ -194,10 +194,12 @@ blockquote {
    padding: 20px 0;
 		&__title {
          font-size: 30px;
-         font-weight: 300;
+         font-weight: 400;
+         letter-spacing: 2.5px;
          text-align: center;
          @media (max-width: 1009px) {
-            font-size: 24px;
+            font-size: 22px;
+            padding: 0 20px;
          }
 		}
 		&__swiper {
@@ -214,6 +216,7 @@ blockquote {
 		}
 
 		&__image {
+         height: 350px;
          max-width: 500px;
          object-fit: contain;
          &:hover{
@@ -221,6 +224,7 @@ blockquote {
             transition: 1s ease;
          }
          @media (max-width: 1009px) {
+            height: 230px;
             max-width: 330px;
          }
 		}

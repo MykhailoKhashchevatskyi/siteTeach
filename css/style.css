@@ -130,12 +130,15 @@ html {
   text-transform: uppercase;
   line-height: 29.1px;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 .list__item:hover {
-  color: #FF5E69;
+  color: #ff8a56;
+  transform: scale(1.05);
 }
 .list__item:active {
-  color: #FF5E69;
+  color: #ff8a56;
+  transform: scale(0.95);
 }
 @media (max-width: 360px) {
   .list__item {
@@ -331,7 +334,7 @@ blockquote {
   }
 }
 .info__title {
-  color: #FF5E69;
+  color: #FF8A56;
   font-size: 24px;
   text-transform: uppercase;
   line-height: 26px;
@@ -358,16 +361,40 @@ blockquote {
   padding: 20px 0;
 }
 .courses__title {
+  position: relative;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 2.5px;
   text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 1009px) {
   .courses__title {
     font-size: 22px;
     padding: 0 20px;
   }
+}
+.courses__title:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background-color: #FF8A56;
+}
+.courses__title:after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #333;
 }
 .swiper-block__box {
   display: flex;
@@ -399,7 +426,7 @@ blockquote {
 }
 
 .gallery {
-  padding: 50px 0;
+  padding: 10px 0 30px 0;
 }
 @media (min-width: 1009px) {
   .gallery__flex {
@@ -421,6 +448,7 @@ blockquote {
   gap: 30px;
 }
 .gallery__title {
+  position: relative;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 2.5px;
@@ -431,6 +459,17 @@ blockquote {
     font-size: 22px;
     padding: 0 20px;
   }
+}
+.gallery__title:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100px;
+  bottom: -10px;
+  left: -10px;
+  height: 2px;
+  background-color: black;
+  margin: 0 auto 10px auto;
 }
 .gallery__block {
   display: flex;
@@ -457,6 +496,125 @@ blockquote {
   margin-bottom: 30px;
 }
 
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox__img {
+  max-width: 90%;
+  max-height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+.studying__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 0;
+  text-align: left;
+}
+@media (max-width: 1009px) {
+  .studying__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.studying__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1009px) {
+  .studying__block {
+    flex: 1 1;
+  }
+}
+@media (max-width: 416px) {
+  .studying__block {
+    gap: 10px;
+  }
+}
+.studying__pin {
+  align-self: flex-start;
+  max-width: 50px;
+}
+@media (max-width: 1009px) {
+  .studying__pin {
+    max-width: 30px;
+  }
+}
+@media (max-width: 416px) {
+  .studying__pin {
+    max-width: 20px;
+  }
+}
+.studying__title {
+  margin-left: 30px;
+  align-self: flex-start;
+  color: #FF8A56;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 26px;
+}
+@media (max-width: 1009px) {
+  .studying__title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 416px) {
+  .studying__title {
+    font-size: 16px;
+    line-height: 18px;
+    margin-left: 0;
+  }
+}
+.studying__text {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (max-width: 1009px) {
+  .studying__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 416px) {
+  .studying__text {
+    font-size: 10px;
+  }
+}
+
 .footer {
   padding: 50px 0;
   background-color: black;
@@ -479,12 +637,22 @@ blockquote {
 .footer__item {
   letter-spacing: 1px;
   color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 .footer__item:last-child {
-  color: #FF8A56;
+  color: #ff8a56;
 }
 .footer__item:hover {
   cursor: pointer;
+  color: #ff8a56;
+  transform: scale(1.1);
+}
+.footer__item:active {
+  transform: scale(0.95);
+}
+.footer__item:focus {
+  outline: 2px solid #ff8a56;
+  outline-offset: 4px;
 }
 
 .burger-menu {

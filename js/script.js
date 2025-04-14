@@ -16,3 +16,33 @@ menuItems.forEach(item => {
     }
   });
 });
+
+
+// gallery 
+
+  const images = document.querySelectorAll('.gallery__image');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      document.body.classList.add('noscroll');
+    });
+  });
+
+  lightboxClose.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    document.body.classList.remove('noscroll');
+  });
+
+  // Закриття по кліку на фон
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+      document.body.classList.remove('noscroll');
+    }
+  });
+

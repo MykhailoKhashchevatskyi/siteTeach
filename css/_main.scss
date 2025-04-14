@@ -164,7 +164,7 @@ blockquote {
 		}
 
 		&__title {
-         color: #FF5E69;
+         color: #FF8A56;
          font-size: 24px;
          text-transform: uppercase;
          line-height: 26px;
@@ -192,16 +192,40 @@ blockquote {
 .courses {
    position: relative;
    padding: 20px 0;
-		&__title {
-         font-size: 30px;
-         font-weight: 400;
-         letter-spacing: 2.5px;
-         text-align: center;
-         @media (max-width: 1009px) {
-            font-size: 22px;
-            padding: 0 20px;
-         }
-		}
+      &__title {
+       position: relative;
+       font-size: 30px;
+       font-weight: 400;
+       letter-spacing: 2.5px;
+       text-align: center;
+       color: #333;
+       text-transform: uppercase;
+       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+       @media (max-width: 1009px) {
+         font-size: 22px;
+         padding: 0 20px;
+       }
+       &:before {
+         content: '';
+         position: absolute;
+         bottom: -10px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 80px;
+         height: 2px;
+         background-color: #FF8A56;
+       }
+       &:after {
+         content: '';
+         position: absolute;
+         bottom: -14px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 40px;
+         height: 2px;
+         background-color: #333;
+       }
+      }
 		&__swiper {
 		}
 }
@@ -244,7 +268,7 @@ blockquote {
 
 
 .gallery {
-   padding: 50px 0;
+   padding: 10px 0 30px 0;
       &__flex{
          @media (min-width: 1009px){
             display: flex;
@@ -264,6 +288,8 @@ blockquote {
 		}
 
 		&__title {
+         
+         position: relative;
          font-size: 30px;
          font-weight: 400;
          letter-spacing: 2.5px;
@@ -271,6 +297,17 @@ blockquote {
          @media (max-width: 1009px) {
             font-size: 22px;
             padding: 0 20px;
+         }
+         &:before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100px;
+            bottom: -10px;
+            left: -10px;
+            height: 2px;
+            background-color: black;
+            margin: 0 auto 10px auto;
          }
 		}
 
@@ -296,6 +333,120 @@ blockquote {
 }
 .gallery-margin-bottom {
    margin-bottom: 30px;
+}
+.container {
+}
+
+
+// light-box
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox__img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+//studyink block
+
+.studying {
+
+		&__wrapper {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items:flex-start;
+         gap: 30px;
+         padding: 40px 0;
+         text-align: left;
+         @media (max-width: 1009px){
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+         } 
+		}
+
+		&__block {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+         @media (max-width: 1009px){
+            flex: 1 1;
+         }
+         @media (max-width: 416px){
+            gap: 10px;
+         }
+		}
+
+		&__pin {
+         align-self: flex-start;
+         max-width: 50px;
+         @media (max-width: 1009px){
+            max-width: 30px;
+         }
+         @media (max-width: 416px){
+            max-width: 20px;
+         }
+		}
+
+		&__title {
+         margin-left: 30px;
+         align-self: flex-start;
+         color: #FF8A56;
+         font-size: 24px;
+         text-transform: uppercase;
+         line-height: 26px;
+         @media (max-width: 1009px){
+            font-size: 18px;
+            line-height: 20px;
+         }
+         @media (max-width: 416px){
+            font-size: 16px;
+            line-height: 18px;
+            margin-left: 0;
+         }
+		}
+
+		&__text {
+         font-size: 16px;
+         font-weight: 500;
+         text-transform: uppercase;
+         @media (max-width: 1009px){
+            font-size: 14px;
+         }
+         @media (max-width: 416px){
+            font-size: 10px;
+         }
+		}
 }
 .container {
 }

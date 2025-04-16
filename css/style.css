@@ -156,7 +156,7 @@ html {
 .hero {
   position: relative;
   height: 700px;
-  padding: 80px 0 0px 0;
+  padding: 60px 0 0px 0;
 }
 @media (max-width: 1171px) {
   .hero {
@@ -364,6 +364,7 @@ blockquote {
 }
 .info__text {
   font-size: 16px;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
 }
@@ -556,20 +557,24 @@ body.noscroll {
 }
 
 .studying__wrapper {
+  margin: 0 0 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
-  padding: 40px 0;
+  padding: 40px;
   text-align: left;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  border-radius: 12px;
 }
 @media (max-width: 1009px) {
   .studying__wrapper {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 10px 0 30px 0;
+    padding: 10px 10px 30px;
   }
 }
 .studying__block {
@@ -603,7 +608,6 @@ body.noscroll {
   }
 }
 .studying__title {
-  margin-left: 30px;
   align-self: flex-start;
   color: #FF8A56;
   font-size: 24px;
@@ -636,6 +640,131 @@ body.noscroll {
 @media (max-width: 416px) {
   .studying__text {
     font-size: 10px;
+  }
+}
+
+.upwork__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: #ff8956;
+  padding: 30px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  animation: float 3s infinite ease-in-out;
+  transition: box-shadow 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+}
+.upwork__wrapper:hover {
+  animation: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+}
+@media (max-width: 1009px) {
+  .upwork__wrapper {
+    padding: 20px;
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.upwork__title {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+@media (max-width: 1009px) {
+  .upwork__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 525px) {
+  .upwork__title {
+    font-size: 17px;
+  }
+}
+@media (max-width: 430px) {
+  .upwork__title {
+    font-size: 12px;
+  }
+}
+.upwork__subtitle {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 1009px) {
+  .upwork__subtitle {
+    font-size: 16px;
+  }
+}
+@media (max-width: 525px) {
+  .upwork__subtitle {
+    font-size: 13px;
+  }
+}
+@media (max-width: 430px) {
+  .upwork__subtitle {
+    font-size: 10px;
+  }
+}
+.upwork__block {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+@media (max-width: 600px) {
+  .upwork__block {
+    gap: 2px;
+  }
+}
+
+.contacts__link {
+  color: #FF8A56;
+  font-size: 16px;
+  text-decoration: none;
+}
+.contacts__link:hover {
+  text-decoration: underline;
+}
+.contacts__icon {
+  max-width: 40px;
+  font-size: 24px;
+  color: #333;
+  margin-right: 10px;
+}
+.contacts__icon:hover {
+  color: #FF8A56;
+}
+@media (max-width: 430px) {
+  .contacts__icon {
+    max-width: 30px;
+  }
+}
+.contacts__button {
+  background-color: rgb(255, 255, 255);
+  color: #131313;
+  padding: 7px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contacts__button:hover {
+  background-color: #e67a4e;
+}
+@media (max-width: 430px) {
+  .contacts__button {
+    padding: 2px 10px;
   }
 }
 

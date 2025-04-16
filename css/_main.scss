@@ -4,7 +4,7 @@
 .hero {
   position: relative;
   height: 700px;
-  padding: 80px 0 0px 0;
+  padding: 60px 0 0px 0;
    @media (max-width: 1171px) {
       padding: 40px 0 90px 0;
    }
@@ -190,6 +190,7 @@ blockquote {
 
 		&__text {
          font-size: 16px;
+         font-weight: 500;
          text-transform: uppercase;
          text-align: center;
          @media (max-width: 1009px){
@@ -397,21 +398,25 @@ body.noscroll {
 
 .studying {
 
-		&__wrapper {
-         display: flex;
+      &__wrapper {
+      margin: 0 0 40px 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: flex-start;
+       gap: 30px;
+       padding: 40px;
+       text-align: left;
+       box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.1);
+       border: 2px solid #ccc;
+       border-radius: 12px;
+       @media (max-width: 1009px) {
          flex-direction: column;
-         justify-content: space-between;
-         align-items:flex-start;
-         gap: 30px;
-         padding: 40px 0;
-         text-align: left;
-         @media (max-width: 1009px){
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 10px 0 30px 0;
-         } 
-		}
+         align-items: center;
+         gap: 20px;
+         padding: 10px 10px 30px;
+       } 
+      }
 
 		&__block {
          display: flex;
@@ -438,7 +443,6 @@ body.noscroll {
 		}
 
 		&__title {
-         margin-left: 30px;
          align-self: flex-start;
          color: #FF8A56;
          font-size: 24px;
@@ -469,3 +473,125 @@ body.noscroll {
 }
 .container {
 }
+
+// upwork
+
+.upwork {
+
+      &__wrapper {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 5px;
+       background-color:#ff8956;
+       padding: 30px;
+       border: 2px solid #ccc;
+       border-radius: 12px;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+       animation: float 3s infinite ease-in-out;
+       transition: box-shadow 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+       &:hover {
+         animation: none;
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+         transform: translateY(-8px);
+       }
+       @media (max-width: 1009px) {
+         padding: 20px;
+       }
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      &__title {
+       font-size: 28px;
+       font-weight: bold;
+       color: black;
+       text-transform: uppercase;
+       @media (max-width: 1009px) {
+         font-size: 22px;
+       }
+       @media (max-width: 525px) {
+         font-size: 17px;
+       }
+       @media (max-width: 430px) {
+         font-size: 12px;
+       }
+      }
+
+      &__subtitle {
+         text-transform: uppercase;
+       font-size: 18px;
+       font-weight: 500;
+       color: #000000;
+       text-align: center;
+       margin-bottom: 20px;
+       @media (max-width: 1009px) {
+         font-size: 16px;
+       }
+       @media (max-width: 525px) {
+         font-size: 13px;
+       }
+       @media (max-width: 430px) {
+         font-size: 10px;
+       }
+      }
+
+      &__block {
+       display: flex;
+       justify-content: space-around;
+       gap: 15px;
+       @media (max-width: 600px) {
+         gap: 2px;
+       }
+      }
+}
+.container {
+}
+.contacts {
+
+      &__link {
+       color: #FF8A56;
+       font-size: 16px;
+       text-decoration: none;
+       &:hover {
+         text-decoration: underline;
+       }
+      }
+
+      &__icon {
+      max-width: 40px;
+       font-size: 24px;
+       color: #333;
+       margin-right: 10px;
+       &:hover {
+         color: #FF8A56;
+       }
+       @media (max-width: 430px) {
+         max-width: 30px;
+       }
+      }
+
+      &__button {
+       background-color: rgb(255, 255, 255);
+       color: #131313;
+       padding: 7px 20px;
+       border: 1px solid black;
+       border-radius: 5px;
+       cursor: pointer;
+       &:hover {
+         background-color: #e67a4e;
+       }
+       @media (max-width: 430px) {
+         padding: 2px 10px;
+       }
+      }
+}
+
+

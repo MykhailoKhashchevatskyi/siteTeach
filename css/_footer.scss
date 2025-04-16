@@ -23,6 +23,9 @@
     letter-spacing: 1px;
     color: #ffffff;
     transition: color 0.3s ease, transform 0.3s ease;
+    @media (max-width: 342px) {
+      font-size: 14px;
+    }
 
     &:last-child {
       color: #ff8a56;

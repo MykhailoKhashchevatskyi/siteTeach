@@ -88,12 +88,13 @@
       width: 560px;
       display: flex;
       justify-content: flex-end;
-         @media (max-width: 1171px) {
-         max-width: 460px;
-         }
-         @media (max-width: 1009px) {
-         max-width: 280px;
-         }
+      margin: 40px 0 0 0;
+            @media (max-width: 1171px) {
+            max-width: 460px;
+            }
+            @media (max-width: 1009px) {
+               max-width: 280px;
+            }
          }
 
          &__picture {

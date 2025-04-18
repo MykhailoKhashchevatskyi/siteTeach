@@ -256,6 +256,7 @@ html {
   width: 560px;
   display: flex;
   justify-content: flex-end;
+  margin: 40px 0 0 0;
 }
 @media (max-width: 1171px) {
   .hero__picture-box {

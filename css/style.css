@@ -165,7 +165,7 @@ html {
 }
 @media (max-width: 1009px) {
   .hero {
-    height: 750px;
+    height: 800px;
     padding: 40px 0 40px 0;
   }
 }

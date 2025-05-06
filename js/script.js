@@ -7,7 +7,7 @@ burgerMenu.addEventListener('click', () => {
   menu.classList.toggle('open');
 });
 
-// Додаємо обробник події для кожного елемента меню
+
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
     if (menu.classList.contains('open')) {
